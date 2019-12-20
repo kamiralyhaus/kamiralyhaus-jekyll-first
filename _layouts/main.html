@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{site.title}}</title>
-    <link rel="stylesheet" href="{{site.baseurl}}/fontawesome/site.css">
-    <link rel="stylesheet" href="{{site.baseurl}}/css/site.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/site.css">
 </head>
 <body>
   <div class="site">
@@ -25,9 +25,7 @@
       {% endif %}
       {{content}}
     </main>
-    <aside class="site-sidebar">
-
-    </aside>
+    {% include sidebar.html %}
     <footer class="site-footer">
       <p>All rights reserve &copy; {{site.title}}</p>
       {% include navigation.html location="footer" %}
