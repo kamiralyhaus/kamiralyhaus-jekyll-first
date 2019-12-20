@@ -60,4 +60,5 @@ gulp.task("watch", function() {
 })); */
 
 // gulp.task("default", gulp.series('jekyll-dev', 'sass', 'watch'));
+gulp.task("deploy", gulp.series('jekyll', 'css'));
 gulp.task("default", gulp.series('jekyll', 'css', 'watch'));
