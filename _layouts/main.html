@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{site.title}}</title>
+    <link rel="stylesheet" href="{{site.baseurl}}/fontawesome/site.css">
     <link rel="stylesheet" href="{{site.baseurl}}/css/site.css">
 </head>
 <body>
@@ -15,17 +16,7 @@
       {% else %}
       <p class="site-title"><a href="{{site.baseurl}}/">{{site.title}}</a></p>
       {% endif %}
-      <nav class="site-nav">
-          <ul>
-              {% for page in site.pages %}
-                {% if page.title %}
-                <li>
-                  <a href="{{site.baseurl}}/{{ page.url }}">{{ page.title }}</a>
-                </li>
-                {% endif %}
-              {% endfor %}
-        </ul>
-      </nav>
+      {% include navigation.html location="header" %}
         
     </header>
     <main class="site-main">
@@ -39,7 +30,7 @@
     </aside>
     <footer class="site-footer">
       <p>All rights reserve &copy; {{site.title}}</p>
-
+      {% include navigation.html location="footer" %}
     </footer>
   </div>
 </body>
